@@ -18,9 +18,10 @@ public class Avaliacao2 {
         PontoXZ p1 =new PontoXZ (-3,6);
         PontoXZ p2 =new PontoXZ (0,2);
         PoligonalFechada n = new PoligonalFechada (3);
-        n.set(1,p);
-        n.set(2,p1);
-        n.set(3,p2);
+        n.set(0,p);
+        n.set(1,p1);
+        n.set(2,p2);
         System.out.println("Comprimento da poligonal = "+n.getComprimento());
+        System.out.println(n.get(2));
     }
 }

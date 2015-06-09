@@ -18,18 +18,16 @@ public class Poligonal {
         if(num<3){
             throw new RuntimeException("Poligonal deve ter ao menos 2 vértices");
         }
-        vertices= new Ponto2D[num];
+        vertices = new Ponto2D[num];
     }
     public int getN(){
         return num;
     }
     public Ponto2D get(int num){
-        try{
-        return vertices[num-1];
-        }
-        catch(Exception e){
+        if(num>=0&&num<this.num)
+            return vertices[num];
+        else
             return null;
-        }
     }
     public void set(int num,Ponto2D d){
         if(plan =='x'){
@@ -49,7 +47,7 @@ public class Poligonal {
         }
         try{
             
-        vertices[num-1]=d;
+        vertices[num]=d;
         }
         catch(Exception e){
             //do NADA

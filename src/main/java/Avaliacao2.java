@@ -22,6 +22,5 @@ public class Avaliacao2 {
         n.set(1,p1);
         n.set(2,p2);
         System.out.println("Comprimento da poligonal = "+n.getComprimento());
-        System.out.println(n.get(2));
     }
 }

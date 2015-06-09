@@ -22,14 +22,6 @@ public class Ponto {
     public String toString(){
         return String.format("%s(%f,%f,%f)",this.getNome(),x,y,z);
     }
-    public boolean equals(Ponto p){
-        try{
-            return x==p.x&&y==p.y&&z==p.z;
-        }
-        catch(Exception e){
-            return false;
-        }
-    }
     public double dist(Ponto p){
         return Math.sqrt(Math.pow(x-p.x,2)+Math.pow(y-p.y,2)+Math.pow(z-p.z,2));
     }
@@ -73,5 +65,26 @@ public class Ponto {
         hash = 79 * hash + (int) (Double.doubleToLongBits(this.z) ^ (Double.doubleToLongBits(this.z) >>> 32));
         return hash;
     }
+
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Ponto other = (Ponto) obj;
+        if (Double.doubleToLongBits(this.x) != Double.doubleToLongBits(other.x)) {
+            return false;
+        }
+        if (Double.doubleToLongBits(this.y) != Double.doubleToLongBits(other.y)) {
+            return false;
+        }
+        if (Double.doubleToLongBits(this.z) != Double.doubleToLongBits(other.z)) {
+            return false;
+        }
+        return true;
+    }
+
 
 }

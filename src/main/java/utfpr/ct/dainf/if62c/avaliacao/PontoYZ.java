@@ -23,6 +23,31 @@ public class PontoYZ extends Ponto2D{
     public String toString(){
         return String.format("%s(%f,%f)",this.getNome(),x,z);
     }
+    @Override
+    public double getX() {
+        return x;
+    }
+@Override
+    public void setX(double x) {
+        this.x = x;
+    }
+@Override
+    public double getY() {
+        return y;
+    }
+@Override
+    public void setY(double y) {
+        this.y = y;
+    }
+@Override
+    public double getZ() {
+        return z;
+    }
+@Override
+    public void setZ(double z) {
+        this.z = z;
+    }
+
     
     
 }
